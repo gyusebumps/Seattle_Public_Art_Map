@@ -1,0 +1,82 @@
+<!-- Defines the document type so variety of browsers can interpret the code the same way -->
+<!DOCTYPE html>
+<html>
+
+  <!-- Starts the HTML header area -->
+  <head>
+
+    <!-- Starts and ends the HTML title (appears on the browser title bar) -->
+    <title>GEO 258 Project Portfolio</title>
+    <!--added main title-->
+    <div id="maintitle"
+        <div style="text-align: center; font-family: Arial; font-weight: bold; font-size: 40px; padding-top: 5px; padding-bottom: 5px; "><font color = "white">Gyubeom's Project Portfolio</font></div>
+
+  <!-- Declares styles for different elements of the webpage, using CSS syntax. Edit this stuff to customize your styling and feel free to add other style elements-->
+    <!--changed backgroud-color-->
+    <!--changed map size-->
+    <style type="text/css">
+      html, body { height: 100%; margin: 0; padding: 25px 25px; background-color: #FF778899; }
+      #map { height: 50%; width: 100%; } /*this modifies the size of your Google map. You might consider changing this to make your map appear larger*/
+    </style>
+
+  <!-- Ends the HTML header section -->
+  </head>
+
+ <!-- Starts the HTML body area-->
+  <body>
+
+    <!-- Displays the text at the top of the web page, title in bold Arial on left. You can adjust font and text size if you want. -->
+   <!--changed font color, location of text-->
+   <div id="title1"
+       <div style="text-align: center; font-family: Arial; font-weight: bold; font-size: 28px; padding-top: 5px; padding-bottom: 5px; "><font color = "white">Top 10 Tour Spots Created in Google Mymap</font></div>
+
+   <!-- below is the code needed for a basic Google Map. Modify this code by deleting the comment-out syntax, inputing your own API key, and adjusting the center and zoom to make your Google Map appear. Also bring in the KMZ layer you made in Project 1, and make additional enhancements of your choosing based on what you learned in Project 2.-->
+   <!--make sattlite view to be base-->
+    <div id="map"></div>
+    <script type="text/javascript">
+
+    var map;
+    function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+    mapTypeId: google.maps.MapTypeId.SATELLITE,
+    center: {lat: 47.6097, lng: -122.3331},
+    zoom: 11
+    });
+-->
+<!--insert KMZ layer here by adding the URL to the KMZ file you uploaded to your webspace in Project 1.-->
+<!--
+  var kmz = new google.maps.KmlLayer({
+      url: 'http://students.washington.edu/gyubeom/TourSpots1.kmz',
+      map: map
+  });
+}
+    </script>
+
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMAqDa7JIQL5h8nuVaFKSjsuK19AHEOdw&callback=initMap">
+    </script>
+   <!--changed font color, and text location-->
+   <div id="text1"
+        <div style="text-align: center; font-family: Arial;">
+          <p><font color = "white">This map shows the locations of top 10 tour spots in Busan, South Korea. Also, it gives zoom scale option; zoom in or out is available. It is built using Google Maps API. Besides, the KMZ layer containing 10 spots’ information can be shown. I customized it by setting the base map to the satellite view without choosing in default map setting.</font></p>
+
+        </div>
+   <!--changed font color, and text location-->
+   <div id="title2"
+       <div style="text-align: center; font-family: Arial; font-weight: bold; font-size: 28px; padding-top: 5px; padding-bottom: 5px; "><font color = "white">20 Public Arts In Seattle Created in Carto DB<font></div>
+
+    <!-- put the code that will let you embed your CartoDB map here -->
+   <!--changed font color, and text location-->
+   <iframe width="100%" height="450" frameborder="0" src="https://gyubeom.carto.com/builder/54e7f702-26e0-4412-b921-94c5efc9609c/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+   <div id="text2"
+        <div style="text-align: center; font-family: Arial;">
+          <p><font color = "white">This is map containing 20 Public Arts located in Seattle by using Carto. You can get each public art's infomation by clicking each spot.<font></p>
+        </div>
+
+  <!-- Ends the HTML body area -->
+  </body>
+
+<!--This document was written by Emma Slager, PhD student at the University of Washington-->
+
+<!-- Ends the HTML file -->
+</html>
