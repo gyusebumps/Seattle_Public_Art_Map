@@ -1,4 +1,4 @@
-# Seattle_Tour_Map
+# Seattle_Public_Art_Map
 
 Author : Gyubeom Kim
 
